@@ -147,6 +147,11 @@ main {
     font-size: 1.1em;
     margin: 3rem auto;
 }
+
+main iframe {
+    width: 100%;
+    height: 750px;
+}
 /* #endregion */
 
 
