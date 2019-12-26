@@ -103,17 +103,20 @@ nav .button-list {
     justify-content: space-around;
 }
 
-nav .button-list li {
+nav li {
     padding: 0.25em 1em;
     border-left: 1px solid #777777;
     border-right: 1px solid #777777;
 }
 
-.nav-link:visited {
+nav a:visited {
     color: white;
 }
 
-#nav-selected {
+/* If the page and menu item match, dim said menu item. */
+/* Huge thanks to https://css-tricks.com/including-navigation-code-on-all-pages-even-with-current-navigation-highlighting/
+for this*/
+#home .home, #toc .toc {
     color: #999999;
     text-decoration: none;
 }

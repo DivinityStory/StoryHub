@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Divinity | The Turning Point</title>
 
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="/css/main.css">
 
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
@@ -19,27 +19,9 @@
     <link rel="manifest" href="../media/favicon/site.webmanifest">
 </head>
 
-<body>
+<body id="chapter-0">
     <nav>
-        <ul class="button-list">
-            <li>
-                <a class="nav-link" href="../index.html">
-                    Home / About
-                </a>
-            </li>
-            <li>
-                <a class="nav-link" id="nav-selected" href="#">
-                    Table of Contents
-                </a>
-            </li>
-            <li>
-                <a class="nav-link" href="#">
-                    Latest Chapter
-                </a>
-            </li>
-        </ul>
-
-        <hr class="thin-hr">
+        <script src="/modules/nav-menu.js"></script>
     </nav>
 
     <header id="toc-header">
@@ -53,30 +35,7 @@
     </main>
 
     <footer>
-        <hr class="thin-hr">
-
-        <ul class="button-list">
-            <!-- Twitter -->
-            <li>
-                <a class="image-link" href="https://twitter.com/DivinityStory">
-                    <img src="../media/twitter-icon.png" alt="Twitter">
-                </a>
-            </li>
-
-            <!-- Toyhou.se -->
-            <li>
-                <a class="image-link" href="https://toyhou.se/DivinityStory">
-                    <img src="../media/toyhouse-icon.png" alt="Toyhou.se">
-                </a>
-            </li>
-
-            <!-- AO3 -->
-            <li>
-                <a class="image-link" href="https://archiveofourown.org/works/13366659/chapters/30608427">
-                    <img src="../media/ao3-icon.png" alt="Archive of Our Own">
-                </a>
-            </li>
-        </ul>
+        <script src="/modules/social-menu.js"></script>
     </footer>
 
     <!-- From https://stackoverflow.com/a/53965010 -->
