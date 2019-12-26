@@ -131,6 +131,17 @@ header {
     margin: 2.5rem auto;
 }
 
+.smaller-header {
+    margin-bottom: 0.75em;
+}
+
+.smaller-header h1 {
+    font-size: 3rem;
+    margin: 0 auto;
+
+    text-shadow: 0px 0px 4px white;
+}
+
 header img {
     width: 50%;
     margin: -2.25rem auto;
@@ -138,6 +149,7 @@ header img {
 
 header h1 {
     padding: 0 0.5em;
+    text-shadow: 0px 0px 8px white;
 }
 
 header h2 {
@@ -198,15 +210,6 @@ footer .button-list li {
 
 
 /* #region table of contents styling */
-#toc-header {
-    margin-bottom: 0.75em;
-}
-
-#toc-header h1 {
-    font-size: 3rem;
-    margin: 0 auto;
-}
-
 #toc-list {
     display: flex;
     flex-direction: column;
