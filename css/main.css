@@ -58,6 +58,7 @@ hr {
     margin-left: -3333px;
     min-height: 20px;
 
+    border-style: solid;
     border-color: #4d515b;
     background-color: #4d515b;
 }
