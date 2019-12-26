@@ -1,0 +1,276 @@
+/* #region palette */
+/* #1e2025 - dull black */
+/* #26282d - slightly paler black */
+/* #4d515b - cool dark grey */
+/* #endregion */
+
+
+/* #region macro / misc styling */
+html, body {
+    margin: 0;
+    overflow-x: hidden;
+    
+    /* Thanks to https://stackoverflow.com/a/12253099 for footer that is positioned
+    at the bottom of content or screen, whichever is lower */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    background-color: #1e2025;
+    color: #dddddd;
+    font-family: "Noto Sans", sans-serif;
+}
+
+main {
+    flex: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Noto Serif", serif;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+a {
+    color: white;
+}
+a:visited {
+    color: #999999;
+}
+a:focus, a:hover {
+    color: #cccccc;
+}
+a:active {
+    color: #888888;
+}
+
+hr {
+    margin: 0%;
+    width: 9999px;
+    margin-left: -3333px;
+    min-height: 20px;
+
+    border-color: #4d515b;
+    background-color: #4d515b;
+}
+
+.thin-hr {
+    min-height: 5px;
+}
+
+nav, footer {
+    width: 100%;
+    margin: 0 auto;
+
+    text-align: center;
+    background-color: #1e2025;
+}
+
+.button-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style-type: none;
+
+    margin: 0 auto;
+    width: 100%;
+    max-width: 999px;
+    background-color: #26282d;
+}
+/* #endregion */
+
+
+/* #region nav styling */
+nav {
+    font-family: "Noto Serif", serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    position: sticky;
+    top: 0;
+}
+
+nav .button-list {
+    padding: 0.75em 0;
+    justify-content: space-around;
+}
+
+nav .button-list li {
+    padding: 0.25em 1em;
+    border-left: 1px solid #777777;
+    border-right: 1px solid #777777;
+}
+
+.nav-link:visited {
+    color: white;
+}
+
+#nav-selected {
+    color: #999999;
+    text-decoration: none;
+}
+/* #endregion */
+
+
+/* #region header styling */
+header {
+    text-align: center;
+    margin: 2.5rem auto;
+}
+
+header img {
+    width: 50%;
+    margin: -2.25rem auto;
+}
+
+header h1 {
+    padding: 0 0.5em;
+}
+
+header h2 {
+    padding: 0 1em;
+}
+/* #endregion */
+
+
+/* #region main content styling */
+main {
+    width: 70vw;
+    font-size: 1.1em;
+    margin: 3rem auto;
+}
+/* #endregion */
+
+
+/* #region footer styling */
+footer .button-list {
+    padding: 1rem 0;
+}
+
+footer .button-list li {
+    padding: 0 2em;
+}
+/* #endregion */
+
+
+/* #region image link styling */
+.image-link {
+    display: inline-block;
+    margin: 0;
+    min-width: min-content;
+}
+
+.image-link img {
+    max-width: 95%;
+    margin: auto;
+}
+
+.image-link:link {
+    filter: brightness(65%);
+}
+
+.image-link:focus, .image-link:hover {
+    filter: grayscale(100%) brightness(100%);
+}
+/* #endregion */
+
+
+/* #region table of contents styling */
+#toc-header {
+    margin-bottom: 0.75em;
+}
+
+#toc-header h1 {
+    font-size: 3rem;
+    margin: 0 auto;
+}
+
+#toc-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    list-style-type: none;
+    text-align: center;
+    width: 75%;
+    
+    margin: 0 auto 1.75rem;
+    padding: 0;
+    font-size: 1.75rem;
+    font-family: "Noto Serif", serif;
+}
+
+#toc-list li {
+    margin: 0.5em 0;
+    padding: 0.5em 0;
+    border-top: 1px solid #888888;
+    border-bottom: 1px solid #888888;
+}
+/* #endregion */
+
+
+/* #region Media Queries */
+@media screen and (max-width: 725px) {
+    #toc-list {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 550px) {
+    main {
+        width: 85vw;
+    }
+}
+
+/* Change nav menu font size when screen gets too small */
+@media screen and (max-width: 435px) {
+    nav {
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 291px) {
+    nav {
+        font-size: 0.65rem;
+    }
+}
+
+/* Shrink fontsizes when screen gets too small */
+@media screen and (max-width: 325px) {
+    h1 {
+        font-size: 3rem;
+    }
+    
+    #toc-header h1 {
+        font-size: 2rem;
+    }
+
+    #toc-list {
+        font-size: 1.5rem;
+    }
+}
+
+/* When screen gets larger, keep header and social link imgs from getting too big */
+@media screen and (min-width: 350px) {
+    header img {
+        max-width: 250px;
+    }
+
+    .image-link img {
+        max-width: 50px;
+    }
+}
+
+/* For extra big screens, make sure the nav is at least 65% of the screen's width */
+@media screen and (min-width: 1519px){
+    .button-list {
+        max-width: 65%;
+    }
+}
+/* #endregion */
