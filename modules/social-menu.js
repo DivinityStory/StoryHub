@@ -9,21 +9,21 @@ let socialHtml =
     <!-- Twitter -->
     <li>
         <a class="image-link" href="https://twitter.com/DivinityStory">
-            <img src="/media/twitter-icon.png" alt="Twitter">
+            <img src="media/twitter-icon.png" alt="Twitter">
         </a>
     </li>
 
     <!-- Toyhou.se -->
     <li>
         <a class="image-link" href="https://toyhou.se/DivinityStory">
-            <img src="/media/toyhouse-icon.png" alt="Toyhou.se">
+            <img src="media/toyhouse-icon.png" alt="Toyhou.se">
         </a>
     </li>
 
     <!-- AO3 -->
     <li>
         <a class="image-link" href="https://archiveofourown.org/works/13366659/chapters/30608427">
-            <img src="/media/ao3-icon.png" alt="Archive of Our Own">
+            <img src="media/ao3-icon.png" alt="Archive of Our Own">
         </a>
     </li>
 </ul>

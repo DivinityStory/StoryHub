@@ -5,17 +5,17 @@ let navHtml =
 `
 <ul class="button-list">
 <li>
-    <a class="home" href="/index.html">
+    <a class="home" href="index.html">
         Home / About
     </a>
 </li>
 <li>
-    <a class="toc" href="/table-of-contents.html">
+    <a class="toc" href="table-of-contents.html">
         Table of Contents
     </a>
 </li>
 <li>
-    <a class="chapter1" href="/chapters/chapter-1.html">
+    <a class="chapter1" href="chapter-1.html">
         Latest Chapter
     </a>
 </li>
