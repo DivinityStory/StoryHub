@@ -116,7 +116,9 @@ nav a:visited {
 /* If the page and menu item match, dim said menu item. */
 /* Huge thanks to https://css-tricks.com/including-navigation-code-on-all-pages-even-with-current-navigation-highlighting/
 for this*/
-#home .home, #toc .toc {
+#home .home,
+#toc .toc,
+#chapter1 .chapter1 {
     color: #999999;
     text-decoration: none;
 }

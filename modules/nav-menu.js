@@ -15,7 +15,7 @@ let navHtml =
     </a>
 </li>
 <li>
-    <a class="placeholder" href="#">
+    <a class="chapter1" href="/chapters/chapter-1.html">
         Latest Chapter
     </a>
 </li>
