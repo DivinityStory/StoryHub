@@ -21,7 +21,7 @@
 
 <body id="chapter-0">
     <nav>
-        <script src="modules/nav-menu.js"></script>
+        <script src="js/nav-module.js"></script>
     </nav>
 
     <header class="smaller-header">
@@ -36,7 +36,7 @@
     </main>
 
     <footer>
-        <script src="modules/social-menu.js"></script>
+        <script src="js/social-module.js"></script>
     </footer>
 
     <!-- From https://stackoverflow.com/a/53965010 -->
@@ -48,16 +48,16 @@
             var url = iframes[i].getAttribute("src");
             if (url.startsWith("https://docs.google.com/document/d/")) {
                 // create div and replace iframe
-                let d = document.createElement('div');
-                d.classList.add("embedded-doc"); // optional
-                iframes[i].parentElement.replaceChild(d, iframes[i]);
+                let replaceDiv = document.createElement('div');
+                replaceDiv.classList.add("embedded-doc"); // optional
+                iframes[i].parentElement.replaceChild(replaceDiv, iframes[i]);
 
                 // CORS request
                 var xhr = new XMLHttpRequest();
                 xhr.open('GET', url, true);
                 xhr.onload = function () {
                     // display response
-                    d.innerHTML = xhr.responseText;
+                    replaceDiv.innerHTML = xhr.responseText;
                 };
                 xhr.send();
             }
