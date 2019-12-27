@@ -160,7 +160,7 @@ header h2 {
 
 /* #region main content styling */
 main {
-    width: 70vw;
+    width: 66vw;
     font-size: 1.1em;
     margin: 3rem auto;
 }
@@ -168,7 +168,23 @@ main {
 .embedded-doc {
     padding: 1em 2em 4em;
     background-color: #26282d;
-    border: 0.25em solid #888888;
+    border: 0.25em double #888888;
+}
+
+.button {
+    display: flex;
+    width: min-content;
+    padding: 0.6rem;
+    
+    background-color: #26282d;
+    border: 2px solid #4d515b;
+    border-radius: 100%;
+}
+.button:focus, .button:hover {
+    background-color: #4d515b;
+}
+.button:active {
+    background-color: #777777;
 }
 /* #endregion */
 
