@@ -78,7 +78,6 @@ nav, footer {
 .button-list {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     list-style-type: none;
 
     margin: 0 auto;
@@ -175,26 +174,33 @@ main {
 
 
 /* #region footer styling */
+footer {
+    position: sticky;
+    bottom: 0;
+}
+
+main {
+    padding-bottom: 8rem;
+}
+
 footer .button-list {
-    padding: 1rem 0;
+    padding: 0.5rem 0;
+    justify-content: space-around;
 }
 
-footer .button-list li {
-    padding: 0 2em;
+footer li {
+    margin: 0 0.5em;
 }
-/* #endregion */
 
-
-/* #region image link styling */
 .image-link {
-    display: inline-block;
+    display: flex;
     margin: 0;
     min-width: min-content;
+    min-height: min-content;
 }
 
 .image-link img {
-    max-width: 95%;
-    margin: auto;
+    max-width: 35px;
 }
 
 .image-link:link {
@@ -244,15 +250,23 @@ footer .button-list li {
     }
 }
 
-/* Change nav menu font size when screen gets too small */
+/* Change nav / social menu sizes when screen gets too small */
 @media screen and (max-width: 435px) {
     nav {
         font-size: 1rem;
+    }
+
+    .image-link img {
+        max-width: 25px;
     }
 }
 @media screen and (max-width: 291px) {
     nav {
         font-size: 0.65rem;
+    }
+
+    .image-link img {
+        max-width: 15px;
     }
 }
 
@@ -271,14 +285,10 @@ footer .button-list li {
     }
 }
 
-/* When screen gets larger, keep header and social link imgs from getting too big */
+/* When screen gets larger, keep header img from getting too big */
 @media screen and (min-width: 350px) {
     header img {
         max-width: 250px;
-    }
-
-    .image-link img {
-        max-width: 50px;
     }
 }
 
