@@ -167,25 +167,9 @@ main {
 }
 
 .embedded-doc {
-    height: 635px;
-    overflow-y: scroll;
-
     padding: 1em 2em 4em;
-    background-color: white;
-    color: black;
-}
-
-/* Adds space to bottom of the div equiv to bottom padding w/ height */
-/* Thanks to https://stackoverflow.com/a/22040425 for this! */
-.embedded-doc::after {
-    content: "";
-    display: block;
-    height: 4em;
-    width: 100%;
-}
- 
-.simplebar-scrollbar::before {
-    background-color: red;
+    background-color: #26282d;
+    border: 0.25em solid #888888;
 }
 /* #endregion */
 
