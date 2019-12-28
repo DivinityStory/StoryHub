@@ -235,6 +235,11 @@ main iframe {
     background-color: #777777;
 }
 
+.button img {
+    width: 100%;
+    height: auto;
+}
+
 #top-button {
     left: 5%;
     margin-bottom: 3.25rem;
@@ -275,7 +280,9 @@ footer li {
 }
 
 .image-link img {
+    width: 100%;
     max-width: 35px;
+    height: auto;
 }
 
 .image-link:link {
