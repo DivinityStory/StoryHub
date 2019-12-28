@@ -144,6 +144,7 @@ header {
 
 header img {
     width: 50%;
+    max-width: 250px;
     margin: -2.25rem auto;
 }
 
@@ -160,15 +161,32 @@ header h2 {
 
 /* #region main content styling */
 main {
-    width: 66vw;
+    box-sizing: border-box;
+    width: 66%;
     font-size: 1.1em;
-    margin: 3rem auto;
+    margin: 1rem auto 3rem;
+    padding-bottom: 8rem;
+}
+
+#home main {
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 .embedded-doc {
+    margin-top: 1rem;
     padding: 1em 2em 4em;
     background-color: #26282d;
     border: 0.25em double #888888;
+}
+
+main iframe {
+    width: 100%;
+    max-width: 845px;
+    height: 750px;
+
+    display: block;
+    margin: autos;
 }
 
 #light-mode {
@@ -208,18 +226,18 @@ main {
 }
 
 #top-button {
-    left: 10%;
+    left: 5%;
     margin-bottom: 3.25rem;
 }
 #mode-button {
-    left: 10%;
+    left: 5%;
 }
 #to-bookmark-button {
-    right: 10%;
+    right: 5%;
     margin-bottom: 3.25rem;
 }
 #bookmark-button {
-    right: 10%;
+    right: 5%;
 }
 /* #endregion */
 
@@ -228,10 +246,6 @@ main {
 footer {
     position: sticky;
     bottom: 0;
-}
-
-main {
-    padding-bottom: 8rem;
 }
 
 footer .button-list {
@@ -295,13 +309,17 @@ footer li {
     #toc-list {
         width: 100%;
     }
-
+}
+@media screen and (max-width: 1515px){
     main {
-        width: 85vw;
+        width: 98%;
     }
-
+    
     .button, .button img {
-        filter: opacity(75%);
+        filter: opacity(60%);
+    }
+    .button:focus, .button:hover, .button img:focus, .button img:hover {
+        filter: opacity(85%);
     }
 }
 
@@ -326,7 +344,7 @@ footer li {
 }
 
 /* Shrink fontsizes when screen gets too small */
-@media screen and (max-width: 325px) {
+@media screen and (max-width: 415px) {
     h1 {
         font-size: 3rem;
     }
@@ -335,15 +353,25 @@ footer li {
         font-size: 2rem;
     }
 
+    .smaller-header h1 {
+        font-size: 2.25rem;
+    }
+
     #toc-list {
         font-size: 1.5rem;
     }
-}
 
-/* When screen gets larger, keep header img from getting too big */
-@media screen and (min-width: 350px) {
-    header img {
-        max-width: 250px;
+    .embedded-doc {
+        font-size: 0.8rem;
+    }
+}
+@media screen and (max-width: 300px) {
+    .smaller-header h1 {
+        font-size: 1.5rem;
+    }
+
+    #toc-list {
+        font-size: 1rem;
     }
 }
 
