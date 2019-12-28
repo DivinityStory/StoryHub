@@ -171,6 +171,11 @@ main {
     border: 0.25em double #888888;
 }
 
+#light-mode {
+    background-color: white;
+    color: black;
+}
+
 .button {
     display: flex;
     width: min-content;
@@ -179,12 +184,30 @@ main {
     background-color: #26282d;
     border: 2px solid #4d515b;
     border-radius: 100%;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .button:focus, .button:hover {
     background-color: #4d515b;
 }
 .button:active {
     background-color: #777777;
+}
+
+#mode-button {
+    position: fixed;
+    left: 10%;
+    bottom: 4em;
+}
+#top-button {
+    position: fixed;
+    right: 10%;
+    bottom: 4em;
 }
 /* #endregion */
 
@@ -255,14 +278,18 @@ footer li {
 
 
 /* #region Media Queries */
+/* Make social / main expand to fill more space when the screen gets too small */
 @media screen and (max-width: 725px) {
     #toc-list {
         width: 100%;
     }
-}
-@media screen and (max-width: 550px) {
+
     main {
         width: 85vw;
+    }
+
+    .button, .button img {
+        filter: opacity(75%);
     }
 }
 
