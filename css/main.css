@@ -178,8 +178,13 @@ main {
 
 .button {
     display: flex;
-    width: min-content;
     padding: 0.6rem;
+    
+    box-sizing: border-box;
+    max-width: 45px;
+    
+    text-align: center;
+    font-size: 0.6rem;
     
     background-color: #26282d;
     border: 2px solid #4d515b;
@@ -202,12 +207,12 @@ main {
 #mode-button {
     position: fixed;
     left: 10%;
-    bottom: 4em;
+    bottom: 4.25rem;
 }
 #top-button {
     position: fixed;
     right: 10%;
-    bottom: 4em;
+    bottom: 4.25rem;
 }
 /* #endregion */
 
