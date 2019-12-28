@@ -65,13 +65,13 @@ function saveBookmark() {
     let userPos = document.body.scrollTop ? document.body.scrollTop : document.documentElement.scrollTop;
 
     // Save it with a key unique to this chapter.
-    localStorage.setItem(`divinity-${document.body.id}-bm`, JSON.stringify(userPos));
+    localStorage.setItem(`divinity-${document.body.id}-bookmark`, JSON.stringify(userPos));
 }
 
 // Go to the bookmark stored in local storage. Does nothing if not found.
 function goToBookmark() {
     // Get the bookmark position for this chapter.
-    let bookmarkPos = localStorage.getItem(`divinity-${document.body.id}-bm`);
+    let bookmarkPos = localStorage.getItem(`divinity-${document.body.id}-bookmark`);
 
     // If it's not found, don't bother.
     if (bookmarkPos) {
