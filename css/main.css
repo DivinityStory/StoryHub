@@ -186,7 +186,7 @@ main iframe {
     height: 750px;
 
     display: block;
-    margin: autos;
+    margin: auto;
 }
 
 #light-mode {
