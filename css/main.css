@@ -231,7 +231,7 @@ main iframe {
 .button img {
     width: 100%;
     max-width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 #top-button {
@@ -275,7 +275,7 @@ footer li {
 .image-link img {
     width: 100%;
     max-width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 .image-link:link {
