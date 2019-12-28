@@ -4,10 +4,10 @@
 let buttonHtml =
     `
     <div id="mode-button" class="button">
-        <img src="media/sun-icon.png" alt="">
+        <img src="media/sun-icon.png" alt="Toggle Light Mode">
     </div>
     <div id="top-button" class="button">
-        <img src="media/top-icon.png" alt="">
+        <img src="media/top-icon.png" alt="To Top">
     </div>
     `;
 //#endregion
@@ -32,10 +32,12 @@ function swapMode() {
     if (emDoc.id) {
         emDoc.id = "";
         modeButton.src = "media/sun-icon.png";
+        modeButton.alt = "Toggle Light Mode";
     }
     else {
         emDoc.id = "light-mode";
         modeButton.src = "media/moon-icon.png";
+        modeButton.alt = "Toggle Dark Mode";
     }
 }
 
