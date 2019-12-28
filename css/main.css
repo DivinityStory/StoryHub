@@ -173,6 +173,16 @@ main {
     padding-right: 1em;
 }
 
+#load-image, #load-text {
+    display: block;
+    margin: 0 auto 1em;
+    text-align: center;
+}
+#load-image{
+    max-width: 10%;
+    margin-top: 3em;
+}
+
 .embedded-doc {
     margin-top: 1rem;
     padding: 1em 2em 4em;

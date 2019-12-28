@@ -10,13 +10,21 @@ for (let i = 0; i < iframes.length; i++) {
 
     // If that url is of the kind we're looking for,
     if (url.startsWith("https://docs.google.com/document/d/")) {
-        // create div and replace iframe
+        // create a div to replace the iframe with later
         let replaceDiv = document.createElement('div');
+
+        // Put some content in it to show it's loading
+        replaceDiv.innerHTML =
+            `
+            <img id="load-image" src="media/loading-wheel.gif" alt="Loading...">
+            <p id="load-text">Chapter not loading? Try refreshing.</p>
+            `
+        ;
 
         // Give it a class for easy access
         replaceDiv.classList.add("embedded-doc");
 
-        // Now replace it with a div
+        // Now replace the iframe with our div
         iframes[i].parentElement.replaceChild(replaceDiv, iframes[i]);
 
         // CORS request
