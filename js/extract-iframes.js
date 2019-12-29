@@ -26,7 +26,7 @@ for (let i = 0; i < iframes.length; i++) {
         ;
 
         // Give it a class for easy access
-        replaceDiv.classList.add("embedded-doc");
+        replaceDiv.classList.add("extracted-doc");
 
         // Now replace the iframe with our div
         iframes[i].parentElement.replaceChild(replaceDiv, iframes[i]);
@@ -44,17 +44,17 @@ for (let i = 0; i < iframes.length; i++) {
 }
 
 function filterStyles() {
-    // First, get all the spans in all the embedded documents.
-    let embeddedSpans = document.querySelectorAll(".embedded-doc span");
+    // First, get all the spans in all the extracted documents.
+    let extractedSpans = document.querySelectorAll(".extracted-doc span");
 
     // Then, for each span,
-    for (let i = 0; i < embeddedSpans.length; i++) {
+    for (let i = 0; i < extractedSpans.length; i++) {
         // Get its computed style.
-        let emSpan = embeddedSpans[i];
+        let emSpan = extractedSpans[i];
         let emSpanStyle = window.getComputedStyle(emSpan);
 
         // Now go through the styles on this span. If it has any properties we want, save them to
-        // a string, so we can add it as an inline style.
+        // a string, so we can add them as inline styles.
         let styleVal = "";
         styleVal += getStyleProp(emSpanStyle, "font-style");
         styleVal += getStyleProp(emSpanStyle, "font-weight");
@@ -72,15 +72,15 @@ function filterStyles() {
     }
 
     // Now that we've added all of the styles we want as inline styles, get rid of the style tags
-    // on the embedded documents.
-    let embeddedStyleElems = document.querySelectorAll(".embedded-doc style");
-    for (let i = 0; i < embeddedStyleElems.length; i++) {
-        let element = embeddedStyleElems[i];
+    // on the extracted documents.
+    let extractedStyleElems = document.querySelectorAll(".extracted-doc style");
+    for (let i = 0; i < extractedStyleElems.length; i++) {
+        let element = extractedStyleElems[i];
         element.parentNode.removeChild(element)
     }
 }
 
-// Checks a given style for a given property, and returns it as a string if found. Returns the
+// Checks a given style for a given property, and returns its value as a string if found. Returns the
 // empty string if not found.
 function getStyleProp(style, property) {
     if (style.getPropertyValue(property)) {

@@ -245,7 +245,7 @@ doesn't look great, so it's got to be heavily restyled. */
 }
 
 /* extracted iframe and related button styling */
-.embedded-doc {
+.extracted-doc {
     margin-top: 1rem;
     padding: 1em 2em 4em;
     background-color: #26282d;
@@ -445,7 +445,7 @@ footer li {
         font-size: 1.5rem;
     }
 
-    .embedded-doc {
+    .extracted-doc {
         font-size: 0.8rem;
     }
 }
