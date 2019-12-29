@@ -217,6 +217,15 @@ doesn't look great, so it's got to be heavily restyled. */
     color: #dddddd;
     text-decoration: none;
 }
+
+#twitter-div a h3 {
+    font-size: 1.15em;
+}
+#twitter-div a p {
+    text-align: left;
+    font-size: 0.85em;
+}
+
 #twitter-div a span {
     color: white;
     text-decoration: underline;
