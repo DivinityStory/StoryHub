@@ -174,7 +174,7 @@ main {
     padding-right: 1em;
 }
 
-#load-image, #load-text {
+#load-image, .load-text {
     display: block;
     margin: 0 auto 1em;
     text-align: center;
