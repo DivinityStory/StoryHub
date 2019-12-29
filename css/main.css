@@ -432,8 +432,17 @@ footer li {
         grid-template: 2fr 1fr / 100%;
     }
 
+    #twitter-div {
+        padding-left: 0;
+        border-top: 5px double #888888;
+    }
+
     #twitter-div a {
         height: min-content;
+    }
+
+    #twitter-div iframe {
+        margin-top: 2em !important;
     }
 }
 
