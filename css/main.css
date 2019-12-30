@@ -21,6 +21,11 @@ html, body {
     font-family: "Noto Sans", sans-serif;
 }
 
+b, strong {
+    color: white;
+    font-weight: 900;
+}
+
 main {
     flex: 1;
 }
