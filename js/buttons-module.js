@@ -33,7 +33,7 @@ document.querySelector("#to-bookmark-button").addEventListener("click", goToBook
 // Swap between dark mode and light mode.
 function swapMode() {
     // Get the content element, our embedded doc.
-    let emDoc = document.querySelector(".embedded-doc");
+    let emDoc = document.querySelector(".extracted-doc");
 
     // Get the button's image as well, so we can swap it.
     let modeButton = document.querySelector("#mode-button img");
