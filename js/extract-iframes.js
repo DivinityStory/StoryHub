@@ -70,6 +70,12 @@ function filterStyles() {
 
         // Now add those properties we want to the parent's style attribute.
         emSpan.parentElement.setAttribute("style", styleVal);
+
+        // Additionally, since all centerered text elements are spacers, add a class to them
+        // so we can select them in the CSS style sheet.
+        if (styleVal == "text-align:center;") {
+            emSpan.parentElement.classList.add("spacer");
+        }
     }
 
     // Now that we've added all of the styles we want as inline styles, get rid of the style tags

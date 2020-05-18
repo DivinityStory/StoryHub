@@ -266,6 +266,12 @@ doesn't look great, so it's got to be heavily restyled. */
     background-color: #26282d;
     border: 0.25em double #888888;
 }
+.extracted-doc p {
+    margin: 0.5em 0;
+}
+.extracted-doc .spacer {
+    margin: 1.5em 0;
+}
 
 main iframe {
     width: 100%;
