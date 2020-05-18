@@ -17,10 +17,11 @@ for (let i = 0; i < iframes.length; i++) {
         replaceDiv.innerHTML =
             `
             <img id="load-image" src="media/loading-wheel.gif" alt="Loading...">
-            <p class="load-text">Chapter not loading? Try refreshing.</p>
+            <p class="load-text">Chapter not loading? Give it a little longer, or try refreshing.</p>
             <p class="load-text">
                 You can also read Divinity on 
-                <a href="https://archiveofourown.org/works/13366659/chapters/30608427">Archive of our Own</a>.
+                <a href="https://archiveofourown.org/works/13366659/chapters/30608427">Archive of our Own</a>
+                or <a href="https://toyhou.se/~literature/34515.divinity">Toyhou.se</a>.
             </p>
             `
         ;
