@@ -67,6 +67,7 @@ function filterStyles() {
         let parentStyle = window.getComputedStyle(emSpan.parentElement);
         styleVal = "";
         styleVal += getStyleProp(parentStyle, "text-align");
+        styleVal += getStyleProp(parentStyle, "text-indent");
 
         // Now add those properties we want to the parent's style attribute.
         emSpan.parentElement.setAttribute("style", styleVal);
