@@ -74,7 +74,7 @@ function filterStyles() {
 
         // Additionally, since all centerered text elements are spacers, add a class to them
         // so we can select them in the CSS style sheet.
-        if (styleVal == "text-align:center;") {
+        if (styleVal.includes("text-align:center;")) {
             emSpan.parentElement.classList.add("spacer");
         }
     }
