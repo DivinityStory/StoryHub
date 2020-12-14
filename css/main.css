@@ -110,13 +110,26 @@ nav .button-list {
 }
 
 nav li {
-    padding: 0.25em 1em;
+    padding: 0em 1em 0.333em;
     border-left: 1px solid #777777;
     border-right: 1px solid #777777;
 }
 
+nav a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    border-bottom: 3px double;
+    padding-bottom: 0.1em;
+}
 nav a:visited {
     color: white;
+}
+nav a:focus, nav a:hover {
+    color: #cccccc;
+}
+nav a:active {
+    color: #888888;
 }
 
 /* If the page and menu item match, dim said menu item. */
@@ -265,9 +278,10 @@ doesn't look great, so it's got to be heavily restyled. */
     padding: 1em 2em 4em;
     background-color: #26282d;
     border: 0.25em double #888888;
+    line-height: 2;
 }
 .extracted-doc p {
-    margin: 0.5em 0;
+    margin: 0.4em 0;
 }
 .extracted-doc .spacer {
     margin: 1.5em 0;
