@@ -1,29 +1,5 @@
 "use strict";
 
-//#region HTML to Write
-let buttonHtml =
-    `
-    <div id="mode-button" class="button">
-        <img src="media/sun-icon.png" alt="Toggle Light Mode">
-    </div>
-    
-    <div id="top-button" class="button">
-        <img src="media/top-icon.png" alt="To Top">
-    </div>
-
-    <div id="bookmark-button" class="button">
-        <img src="media/bookmark-icon.png" alt="Save Bookmark">
-    </div>
-
-    <div id="to-bookmark-button" class="button">
-        <img src="media/to-bookmark-icon.png" alt="Go To Bookmark">
-    </div>
-    `;
-//#endregion
-
-// Write the html that was set above
-document.write(buttonHtml);
-
 // Set up some functions to fire when the buttons are clicked.
 document.querySelector("#mode-button").addEventListener("click", swapMode);
 document.querySelector("#top-button").addEventListener("click", backToTop);

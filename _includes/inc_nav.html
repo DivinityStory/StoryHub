@@ -1,0 +1,30 @@
+<nav>
+    <ul class="button-list">
+        <li>
+            <a class="home{% if page.name == "index.html" %} inactive{% endif %}" href="index.html">
+                Home / About
+            </a>
+        </li>
+        <li>
+            <a class="toc{% if page.name == "table-of-contents.html" %} inactive{% endif %}"
+                href="table-of-contents.html">
+                Table of Contents
+            </a>
+        </li>
+        <li>
+            {% assign latest-chapter = -1 %}
+            {% for item in site.data.chapters %}
+                {% if item.number > latest-chapter %}
+                    {% assign latest-chapter = item.number %}
+                {% endif %}
+            {% endfor %}
+            {% capture latest-href %}chapter-{{ latest-chapter }}.html{% endcapture %}
+
+            <a class="chapter{{ latest-chapter }}{% if page.name == latest-href %} inactive{% endif %}"
+                href="{{ latest-href }}">
+                Latest Chapter
+            </a>
+        </li>
+    </ul>
+    <hr class="thin-hr">
+</nav>

@@ -67,7 +67,18 @@ function filterStyles() {
         let parentStyle = window.getComputedStyle(emSpan.parentElement);
         styleVal = "";
         styleVal += getStyleProp(parentStyle, "text-align");
-        styleVal += getStyleProp(parentStyle, "text-indent");
+        
+        // Indent is a special case; Google's embedding uses pt/px, which is not responsive, so we need to convert to em.
+        // Get the indent and size values,
+        let indentVal = parentStyle.getPropertyValue("text-indent");
+        let sizeVal = parentStyle.getPropertyValue("font-size");
+        // If we got something and they are in px, pt, or pc,
+        if (indentVal && sizeVal && indentVal.includes("p") && sizeVal.includes("p")) {
+            // Cut off the unit and then divide indent by size to get the indent in em.
+            indentVal = indentVal.slice(0, -2);
+            sizeVal = sizeVal.slice(0, -2);
+            styleVal += `text-indent:${indentVal / sizeVal}em;`;
+        }
 
         // Now add those properties we want to the parent's style attribute.
         emSpan.parentElement.setAttribute("style", styleVal);
@@ -91,8 +102,9 @@ function filterStyles() {
 // Checks a given style for a given property, and returns its value as a string if found. Returns the
 // empty string if not found.
 function getStyleProp(style, property) {
-    if (style.getPropertyValue(property)) {
-        return `${property}:${style.getPropertyValue(property)};`
+    let propValue = style.getPropertyValue(property);
+    if (propValue) {
+        return `${property}:${propValue};`
     }
     else {
         return "";
