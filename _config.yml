@@ -1,0 +1,6 @@
+url: https://divinitystory.github.io
+
+liquid:
+  error-mode: warn
+  strict-variables: true
+  strict-filters: true

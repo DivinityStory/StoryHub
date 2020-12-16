@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% assign chapter-item = nil %}
+{% for item in site.data.chapters %}
+    
+    {% if page.number == item.number %}
+        {% assign chapter-item = item %}
+        {% break %}
+    {% endif %}
+
+{% endfor %}
+
+<head>
+    {% capture chapter-title %}Divinity | {{ chapter-item.name }}{% endcapture %}
+    {% include inc_metadata.html title=chapter-title tagline=chapter-item.tagline %}
+</head>
+
+<body id="chapter{{ chapter-item.number }}">
+    {% include inc_nav.html %}
+
+    <header class="smaller-header">
+        <h1>
+            {% if chapter-item.number <= 0 %}
+                Prologue: {{ chapter-item.name }}
+            {% else %}
+                Chapter {{ chapter-item.number }}: {{ chapter-item.name }}
+            {% endif %}
+        </h1>
+    </header>
+
+    <hr>
+
+    <main>
+        {% include inc_button-elements.html %}
+        <iframe src="{{ chapter-item.embed-link }}"></iframe>
+    </main>
+
+    {% include inc_footer.html %}
+
+    <script src="js/button-events.js"></script>
+    <script src="js/extract-iframes.js"></script>
+
+</body>
+
+</html>

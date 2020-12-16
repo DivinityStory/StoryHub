@@ -1,0 +1,54 @@
+{% assign title-to-use = page.title %}
+{% assign tagline-to-use = page.tagline %}
+
+{% if include.title %}{% assign title-to-use = include.title %}{% endif %}
+{% if include.tagline %}{% assign tagline-to-use = include.tagline %}{% endif %}
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>{{ title-to-use }}</title>
+
+<!-- Rich Preview Code, courtesy of https://megatags.co/#generate-tags -->
+<!-- Search Engine -->
+<meta name="description" content="{{ tagline-to-use }}">
+<meta name=" image" content="https://divinitystory.github.io/media/divinity-icon-bg.png">
+<!-- Schema.org for Google -->
+<meta itemprop="name" content="{{ title-to-use }}">
+<meta itemprop="description" content="{{ tagline-to-use }}">
+<meta itemprop=" image" content="https://divinitystory.github.io/media/divinity-icon-bg.png">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ title-to-use }}">
+<meta name="twitter:description" content="{{ tagline-to-use }}">
+<meta name=" twitter:site" content="@DivinityStory">
+<meta name="twitter:creator" content="@DivinityStory">
+<meta name="twitter:image:src" content="https://divinitystory.github.io/media/divinity-icon-bg.png">
+<!-- Open Graph general (Facebook, Pinterest & Google+) -->
+<meta name="og:title" content="{{ title-to-use }}">
+<meta name="og:description" content="{{ tagline-to-use }}">
+<meta name=" og:image" content="https://divinitystory.github.io/media/divinity-icon-bg.png">
+<meta name="og:url" content="{% if page.url =='/' %}{{site.url}}{% else %}{{page.url | absolute_url}}{% endif %}">
+<meta name="og:site_name" content="Divinity | Story Hub">
+<meta name="og:type" content="website">
+
+<!-- Link to CSS -->
+<link rel="stylesheet" href="css/main.css">
+
+<!-- Links to Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+
+<!-- Favicon Code -->
+<link rel="apple-touch-icon" sizes="180x180" href="media/favicon/apple-touch-icon.png?v=jwEzYORdeg">
+<link rel="icon" type="image/png" sizes="32x32" href="media/favicon/favicon-32x32.png?v=jwEzYORdeg">
+<link rel="icon" type="image/png" sizes="192x192" href="media/favicon/android-chrome-192x192.png?v=jwEzYORdeg">
+<link rel="icon" type="image/png" sizes="16x16" href="media/favicon/favicon-16x16.png?v=jwEzYORdeg">
+<link rel="manifest" href="media/favicon/site.webmanifest?v=jwEzYORdeg">
+<link rel="mask-icon" href="media/favicon/safari-pinned-tab.svg?v=jwEzYORdeg" color="#33373f">
+<link rel="shortcut icon" href="media/favicon/favicon.ico?v=jwEzYORdeg">
+<meta name="apple-mobile-web-app-title" content="Divinity">
+<meta name="application-name" content="Divinity">
+<meta name="msapplication-TileColor" content="#3d424c">
+<meta name="msapplication-config" content="media/favicon/browserconfig.xml?v=jwEzYORdeg">
+<meta name="theme-color" content="#1e2025">
