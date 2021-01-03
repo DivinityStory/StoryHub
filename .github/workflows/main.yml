@@ -1,0 +1,37 @@
+# This is the basic workflow, edited to automatically update master with the auto-release branch at a specific time.
+
+name: Automatic Scheduled Release
+
+# Controls when the action will run. 
+on:
+  # Happens at a specific UTC time
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    # Mondays, 15:00 UTC / 10:00 AM EST
+    - cron:  '0 15 * * 1'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "release"
+  release:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      
+      # Merges stable_branch into development_branch. https://github.com/marketplace/actions/nightly-merge
+      - name: Weekly Merge
+        uses: robotology/gh-action-nightly-merge@v1.3.1
+        with:
+          stable_branch: 'auto-release'
+          development_branch: 'master'
+          allow_ff: false
+          user_name: Github Weekly Merge Action
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
