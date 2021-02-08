@@ -9,6 +9,7 @@ tagline: Divinity is a fantasy story series about a magical world where angels a
 
 <head>
     {% include inc_metadata.html %}
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
 </head>
 
 <body id="toc">
@@ -33,6 +34,20 @@ tagline: Divinity is a fantasy story series about a magical world where angels a
                             Chapter {{ item.number }}: {{ item.name }}
                         {% endif %}
                     </a>
+                    <div class="chapter-date-grid">
+                        {% if item.uploaded %}    
+                            <span>
+                                <b class="fas fa-upload" aria-label="Uploaded: "></b>
+                                {{ item.uploaded }}
+                            </span>
+                        {% endif %}
+                        {% if item.updated %}    
+                            <span>
+                                <b class="fas fa-pen" aria-label="Last Updated: "></b>
+                                {{ item.updated }}
+                            </span>
+                        {% endif %}
+                    </div>
                 </li>
             {% endfor %}
             <li>
