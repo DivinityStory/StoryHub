@@ -7,8 +7,8 @@ on:
   # Happens at a specific UTC time
   schedule:
     # * is a special character in YAML so you have to quote this string
-    # Mondays, 15:00 UTC / 10:00 AM EST
-    - cron:  '0 15 * * 1'
+    # Mondays, 14:30 UTC / 9:30 AM EST (The schedule can be up to 31 minutes late judging from the GitHub actions tab)
+    - cron:  '30 14 * * 1'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
